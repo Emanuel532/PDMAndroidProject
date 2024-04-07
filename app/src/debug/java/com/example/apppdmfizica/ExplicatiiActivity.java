@@ -38,15 +38,49 @@ public class ExplicatiiActivity extends AppCompatActivity {
 
 
         Button buttonDropdown2 = findViewById(R.id.button_dropdown_MRUV);
-
-
         final ScrollView scrollViewContent_MRUV = findViewById(R.id.scroll_view_content_MRUV);
+        final ScrollView scrollViewContent_MC = findViewById(R.id.scroll_view_content_MC);
+
         buttonDropdown2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toggleScrollViewVisibility(scrollViewContent_MRUV);
+                if (scrollViewContent != null) {
+                    scrollViewContent.setVisibility(View.GONE);
+                }
+
+                if (scrollViewContent_MC != null) {
+                    scrollViewContent_MC.setVisibility(View.GONE);
+                }
+
+                if (scrollViewExplicatii != null) {
+                    scrollViewExplicatii.setVisibility(View.GONE);
+                }
             }
         });
+
+        Button buttonDropdown3 = findViewById(R.id.button_dropdown_MC);
+        buttonDropdown3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleScrollViewVisibility(scrollViewContent_MC);
+                if (scrollViewContent != null) {
+                    scrollViewContent.setVisibility(View.GONE);
+                }
+
+                if (scrollViewContent_MRUV != null) {
+                    scrollViewContent_MRUV.setVisibility(View.GONE);
+                }
+
+                if (scrollViewExplicatii != null) {
+                    scrollViewExplicatii.setVisibility(View.GONE);
+                }
+            }
+
+
+        });
+
+
     }
 
     private void toggleScrollViewVisibility(ScrollView scrollView) {

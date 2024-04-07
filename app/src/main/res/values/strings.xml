@@ -46,5 +46,35 @@
         Prin eliminarea timpului din expresiile legilor (4) și (5) se obține ecuația Galilei\n
         <i>v^2 = v0^2 + 2aΔx</i>
 </string>
+    <!--Misccare ciruclara -->
+    <string name="explanation_content_MC">
+        <b>Miscarea circulara uniforma</b>\n\n
+        Un mobil se mișcă circular uniform când traiectoria este un cerc, iar vectorul viteza <i>v(t)</i> este variabil în timp ca orientare și are mărimea constantă, <i>v(t) = constant</i>.\n
+        Miscarea circulara uniforma este periodică deoarece mobilul trece prin aceeași poziție, stare mecanică, în raport cu SR ales la intervale de timp egale.\n
+        Perioada, <i>T</i>, este intervalul de timp în care se efectuează o rotație completă. Este durata în care mobilul descrie un cerc.\n\n
+        Care sunt perioadele varfurilor acelor de ceasornic?\n
+        <i>T = Δt / n</i>\n
+        Frecvența, <i>v</i>, reprezintă numărul de rotații complete efectuate în unitatea de timp.\n
+        <i>v = n / Δt, v = 1 / T</i>\n
+        Poziția unui mobil ce se mișcă circular uniform în raport cu un punct de pe cerc ales ca SR se stabilește cu ajutorul lungimii arcului de cerc <i>s(t)</i> sau cu ajutorul unghiului la centru, <i>θ(t)</i>, pe care îl face raza corespunzătoare poziției mobilului pe cerc cu raza punctului corespunzător SR.\n
+        Deoarece <i>v(t) = constant</i>, <i>v(t) = vm</i> și <i>v(t) = .s(t) / .t</i>, de unde rezultă\n
+        <i>s(t) = s0(t0) + v(t - t0 )</i> (7)\n
+        legea mișcării circulare uniforme exprimată cu ajutorul vitezei liniare <i>v</i>.\n
+        Sau\n
+        <i>θ(t) = θ0(t0) + ω(t - t0 )</i> (8)\n
+        legea mișcării circulare uniforme exprimată cu ajutorul vitezi unghiulare <i>ω(t)</i>.\n
+        Viteza unghiulară, <i>ω(t)</i>, reprezintă variația unghiului la centru, <i>θ(t)</i>, <i>ω(t) = Δθ(t) / Δt</i>, în unitatea de timp.\n
+        [<i>ω</i>]SI = <i>1 rad/s</i>.\n
+        Radianul (<i>rad</i>) este măsura unghiului la centru care subținde un arc de cerc a cărui lungime este egală cu raza cercului <i>R</i>.\n
+        Din geometrie se știe că\n
+        <i>s(t) = RΔθ(t)</i>\n
+        din\n
+        <i>v(t) = Δs(t) / Δt</i> rezultă <i>v(t) = RΔθ(t) / Δt</i> și <i>v(t) = Rω(t), v = Rω</i>\n
+        În mișcarea circulară uniformă orientarea vectorului viteza este variabilă, se schimbă în orice moment.\n
+        Acceleratia centripeta <i>acp(t)</i>, vectorul orientat spre centrul cercului, reprezintă variația vectorului viteza <i>v(t)</i> în unitatea de timp.\n
+        Marimea vectorului acceleratie centripeta <i>acp(t)</i> este <i>acp = v^2 / R,</i>\n
+        <i>acp = ω^2R</i>
+    </string>
+
 
 </resources>

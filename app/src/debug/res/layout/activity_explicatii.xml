@@ -36,9 +36,7 @@
 
     <!-- gata cu MRU -->
 
-    <!-- Dropdown button for second content -->
-
-    <!-- ScrollView for second content -->
+    <!-- ScrollView pentru MRUV-->
 
 
 
@@ -59,7 +57,7 @@
             android:id="@+id/scroll_view_content_MRUV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="45dp"
+            android:paddingTop="105dp"
             android:visibility="gone">
 
             <LinearLayout
@@ -73,6 +71,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explanation_content_MRUV"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll_view_content">
+
+        <Button
+            android:layout_marginTop="57dp"
+            android:id="@+id/button_dropdown_MC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vezi explicatii pentru Miscarea Circulara"
+            android:textColor="#009688" />
+
+        <!-- ScrollView pentru MC -->
+        <ScrollView
+            android:id="@+id/scroll_view_content_MC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="105dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Textu explicat in a 2 a parte-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explanation_content_MC"
                     android:textSize="16sp"/>
 
             </LinearLayout>
