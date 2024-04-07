@@ -9,4 +9,42 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="explanation_content_MRU"><b>Miscarea rectilinie uniforma</b>\n\n
+        Un mobil se misca rectiliniu uniform cand v(t) = constant.\n
+        Deoarece v = constant, viteza medie si cea momentana sunt aceleasi in orice moment, v = vm.\n
+        Miscarea fiind unidimensionala\n\n
+        <b>vm</b> = Δx(t) / Δt sau <b>vm</b> = [x(t) - x0(t0)] / (t - t0)\n
+        <b>v</b> = Δx(t) / Δt sau <b>v</b> = [x(t) - x0(t0)] / (t - t0)\n
+        de unde rezulta legea miscarii rectilinii uniforme\n
+        <b>x(t)</b> = x0(t0) + <b>v</b>(t - t0) (3)\n
+        care exprima dependenta de timp a coordonatei mobilului sau distantei acestuia fata de SR.\n
+        Functia ce exprima aceasta dependenta este un polinom de gradul intai al carei grafic este o dreapta.
+    </string>
+
+    <string name="explanation_content_MRUV">
+        <b>Miscarea rectilinie uniform variată</b>\n\n
+        Un mobil se mișcă rectiliniu uniform variat când <i>a(t) = constant</i>.\n
+        Deoarece <i>a = constant</i>, accelerația medie și cea momentană sunt aceleași în orice moment, <i>a = am</i>.\n
+        Miscarea fiind unidimensională\n\n
+        <i>am</i> = Δv(t) / Δt sau <i>am</i> = [v(t) - v0(t0)] / (t - t0)\n
+        <i>a</i> = Δv(t) / Δt sau <i>a</i> = [v(t) - v0(t0)] / (t - t0)\n
+        de unde rezultă legea vitezei\n
+        <i>v(t) = v0(t0) + a(t - t0)</i> (4)\n
+        care exprimă dependența de timp a vitezei mobilului.\n
+        Funcția fiind un polinom de gradul întâi, dependența vitezei de timp este liniară.\n
+        Miscarea este accelerată când <i>a > 0</i>, viteza crește.\n
+        Miscarea este încetinită când <i>a 0 </i>, viteza scade.\n
+        Pentru a stabili legea mișcării rectilinii uniform variate, expresia funcției ce exprimă dependența coordonatei de timp, folosim expresia vitezei medii în cazul mișcării unidimensionale\n
+        <i>vm = [x(t) - x0(t0)] / (t - t0)</i>\n
+        și\n
+        <i>vm = [v(t) + v0(t0)] / 2</i>\n
+        Folosirea mediei aritmetice este posibilă deoarece <i>v(t)</i> depinde liniar de timp.\n
+        Din egalarea expresiilor vitezei medii și înlocuind <i>v(t)</i> conform legii vitezei, se obține legea mișcării rectilinii uniform variate\n
+        <i>x(t) = x0(t0) + v0(t - t0) + [a(t - t0)^2] / 2</i> (5)\n
+        care exprimă dependența de timp a coordonatei mobilului sau distanței acestuia față de SR.\n
+        Funcția ce exprimă această dependență este un polinom de gradul al doilea, dependență patratică, al cărei grafic este o parte dintr-o parabolă.\n
+        Prin eliminarea timpului din expresiile legilor (4) și (5) se obține ecuația Galilei\n
+        <i>v^2 = v0^2 + 2aΔx</i>
+</string>
+
 </resources>

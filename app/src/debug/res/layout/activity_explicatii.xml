@@ -3,6 +3,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Your layout content goes here -->
+    <Button
+        android:id="@+id/button_dropdown_MRU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Vezi Miscarea Rectilinie Uniforma"
+        android:textColor="#009688" />
+    <ScrollView
+        android:id="@+id/scroll_view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/button_dropdown_MRU">
+
+        <!-- LinearLayout for content inside ScrollView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Text content -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/explanation_content_MRU"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- gata cu MRU -->
+
+    <!-- Dropdown button for second content -->
+
+    <!-- ScrollView for second content -->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll_view_content">
+
+        <Button
+            android:id="@+id/button_dropdown_MRUV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vezi explicatii pentru Miscarea rectilinie uniform variata"
+            android:textColor="#009688" />
+
+        <!-- ScrollView pentru MRUV -->
+        <ScrollView
+            android:id="@+id/scroll_view_content_MRUV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="45dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Textu explicat in a 2 a parte-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explanation_content_MRUV"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
 
 </RelativeLayout>
