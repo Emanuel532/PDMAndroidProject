@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startAnimation() {
-        // Fade in animation for logo
+        // Logo app animatie
         Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         logoImageView.setVisibility(View.VISIBLE);
         logoImageView.startAnimation(fadeIn);
 
-        // Fade in animation for title text
+        // Animatie titlu app
         Animation fadeIn2 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
         titleTextView.setVisibility(View.VISIBLE);
         titleTextView.startAnimation(fadeIn2);
