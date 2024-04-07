@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         //animatie titlu si imagine
         startAnimation();
 
+
+        Button buttonExplicatii = findViewById(R.id.button_explicatii);
+        buttonExplicatii.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExplicatiiActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //button ajutor
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
