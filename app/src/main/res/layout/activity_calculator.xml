@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Butonul 1 -->
+    <Button
+        android:id="@+id/button_formula1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Calcul mișcare rectilinie uniformă"
+        android:textColor="#009688" />
+
+    <!-- Butonul 2 -->
+    <Button
+        android:id="@+id/button_formula2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_formula1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Formula 2"
+        android:textColor="#009688" />
+
+    <!-- Butonul 3 -->
+    <Button
+        android:id="@+id/button_formula3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_formula2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Formula 3"
+        android:textColor="#009688" />
+
+    <!-- Butonul 4 -->
+    <Button
+        android:id="@+id/button_formula4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_formula3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Formula 4"
+        android:textColor="#009688" />
+
+    <!-- FrameLayout pentru a schimba fragmentele -->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_formula4"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textView_rezultat"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="Rezultate..." />
+
+    </FrameLayout>
+
+</RelativeLayout>

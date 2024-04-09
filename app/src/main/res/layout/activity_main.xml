@@ -62,7 +62,7 @@
         app:layout_constraintVertical_bias="0.852" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_calculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:color="@color/galben_tema_b"

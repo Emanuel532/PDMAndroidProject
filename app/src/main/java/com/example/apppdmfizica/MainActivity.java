@@ -38,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonCalculator = findViewById(R.id.button_calculator);
+        buttonCalculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
+                startActivity(intent);
+            }
+        });
+
         //button ajutor
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
