@@ -43,13 +43,13 @@
                 android:backgroundTint="@color/galben_tema" />
 
             <Button
-                android:id="@+id/button_formula3"
+                android:id="@+id/button_arc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_margin="8dp"
-                android:text="CALCUL MISCAREA CIRCULARA"
+                android:text="Arc"
                 android:textColor="@color/text_buton"
                 android:backgroundTint="@color/galben_tema" />
 

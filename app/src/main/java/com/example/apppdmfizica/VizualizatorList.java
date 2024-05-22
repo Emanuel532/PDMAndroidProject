@@ -31,6 +31,15 @@ public class VizualizatorList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonLaunchArc = findViewById(R.id.button_arc);
+        buttonLaunchArc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VizualizatorList.this, SpringSimulatorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
