@@ -7,7 +7,7 @@
         android:id="@+id/pendulumView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/controlPanel"/>
+        android:layout_above="@+id/controlPanel" />
 
     <LinearLayout
         android:id="@+id/controlPanel"
@@ -21,18 +21,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pendulum Length (px):"/>
+            android:text="Lungime Pendul (px):"/>
         <EditText
             android:id="@+id/editLength"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:text="400"/>
+            android:text="450"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gravity (m/s²):"/>
+            android:text="F Gravitate (m/s²):"/>
         <EditText
             android:id="@+id/editGravity"
             android:layout_width="match_parent"
@@ -43,13 +43,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bob Radius (px):"/>
+            android:text="Raza  (px):"/>
         <EditText
             android:id="@+id/editBobRadius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:text="40"/>
+
+        <CheckBox
+            android:id="@+id/checkboxAirResistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dezactiveaza efectul fortei de frecare aer"
+            android:checked="false"/>
 
         <Button
             android:id="@+id/buttonReset"

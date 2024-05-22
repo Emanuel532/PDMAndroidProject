@@ -1,6 +1,5 @@
 package com.example.apppdmfizica;
 
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,16 +10,17 @@ import android.view.View;
 public class PendulumView extends View {
 
     private Paint paint;
-    private float angle = (float) Math.PI / 4;
+    private float angle = (float) Math.PI / 4;  // Initial angle (45 degrees)
     private float angularVelocity = 0.0f;
     private float angularAcceleration = 0.0f;
-    private float length = 500;
-    private float gravity = 9.8f;
+    private float length = 400;  // Length of the pendulum rod
+    private float gravity = 9.8f;  // Acceleration due to gravity
     private float originX;
     private float originY;
     private float bobX;
     private float bobY;
     private float bobRadius = 40;
+    private boolean airResistanceEnabled = true;
 
     public PendulumView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -46,12 +46,16 @@ public class PendulumView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        // Draw the pendulum rod
         canvas.drawLine(originX, originY, bobX, bobY, paint);
 
+        // Draw the pendulum bob
         canvas.drawCircle(bobX, bobY, bobRadius, paint);
 
+        // Update physics
         updatePendulum();
 
+        // Redraw the view
         invalidate();
     }
 
@@ -61,15 +65,16 @@ public class PendulumView extends View {
     }
 
     private void updatePendulum() {
-        // Update the angular acceleration based on the angle
         angularAcceleration = (float) (-gravity / length * Math.sin(angle));
 
-        // Update the angular velocity and angle
         angularVelocity += angularAcceleration;
         angle += angularVelocity;
 
-        angularVelocity *= 0.99;
+        if (airResistanceEnabled) {
+            angularVelocity *= 0.99;
+        }
 
+        // redeseneaza
         updateBobPosition();
     }
 
@@ -85,8 +90,12 @@ public class PendulumView extends View {
         this.bobRadius = bobRadius;
     }
 
+    public void setAirResistanceEnabled(boolean enabled) {
+        this.airResistanceEnabled = enabled;
+    }
+
     public void resetPendulum() {
-        angle = (float) Math.PI / 4;  // Reset to initial angle
+        angle = (float) Math.PI / 4;  //unghi initial de pornire
         angularVelocity = 0.0f;
         angularAcceleration = 0.0f;
         updateBobPosition();
