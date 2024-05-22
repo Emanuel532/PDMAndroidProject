@@ -29,6 +29,17 @@ public class MainActivity extends AppCompatActivity {
         startAnimation();
 
 
+        //PENTRU VIZIUALIZARE PENDUL
+        Button buttonLaunchPendulum = findViewById(R.id.button_vizualizator);
+        buttonLaunchPendulum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PendulumActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         Button buttonExplicatii = findViewById(R.id.button_explicatii);
         buttonExplicatii.setOnClickListener(new View.OnClickListener() {
             @Override
