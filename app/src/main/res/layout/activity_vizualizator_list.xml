@@ -32,13 +32,13 @@
                 android:backgroundTint="@color/galben_tema" />
 
             <Button
-                android:id="@+id/button_formula2"
+                android:id="@+id/buton_plan_inclinat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_margin="8dp"
-                android:text="CALCUL MISCAREA RECTILINIE UNIFORMA VARIATA"
+                android:text="Vizualizare plan inclinat"
                 android:textColor="@color/text_buton"
                 android:backgroundTint="@color/galben_tema" />
 

@@ -22,6 +22,15 @@ public class VizualizatorList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonLaunchPlanInclinat = findViewById(R.id.buton_plan_inclinat);
+        buttonLaunchPlanInclinat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VizualizatorList.this, SlopeSimulatorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.apppdmfizica.SlopeView
+        android:id="@+id/slopeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controlPanel"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:id="@+id/controlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#E0E0E0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initial Velocity (m/s):"/>
+        <EditText
+            android:id="@+id/editInitialVelocity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="5"/>
+
+
+
+        <CheckBox
+            android:id="@+id/checkBoxAirResistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disable Air Resistance" />
+
+        <Button
+            android:id="@+id/buttonStartSimulation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Simulation"/>
+    </LinearLayout>
+</RelativeLayout>
