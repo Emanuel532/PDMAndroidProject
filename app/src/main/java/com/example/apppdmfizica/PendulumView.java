@@ -1,5 +1,6 @@
 package com.example.apppdmfizica;
 
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -10,11 +11,11 @@ import android.view.View;
 public class PendulumView extends View {
 
     private Paint paint;
-    private float angle = (float) Math.PI / 4;  // Initial angle (45 degrees)
+    private float angle = (float) Math.PI / 4;
     private float angularVelocity = 0.0f;
     private float angularAcceleration = 0.0f;
-    private float length = 650;  // Length of the pendulum rod
-    private float gravity = 9.8f;  // Acceleration due to gravity
+    private float length = 500;
+    private float gravity = 9.8f;
     private float originX;
     private float originY;
     private float bobX;
@@ -45,16 +46,12 @@ public class PendulumView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        // Draw the pendulum rod
         canvas.drawLine(originX, originY, bobX, bobY, paint);
 
-        // Draw the pendulum bob
         canvas.drawCircle(bobX, bobY, bobRadius, paint);
 
-        // Update physics
         updatePendulum();
 
-        // Redraw the view
         invalidate();
     }
 
@@ -71,10 +68,28 @@ public class PendulumView extends View {
         angularVelocity += angularAcceleration;
         angle += angularVelocity;
 
-        // Damping to simulate air resistance
         angularVelocity *= 0.99;
 
-        // Update the bob position based on the new angle
         updateBobPosition();
+    }
+
+    public void setLength(float length) {
+        this.length = length;
+    }
+
+    public void setGravity(float gravity) {
+        this.gravity = gravity;
+    }
+
+    public void setBobRadius(float bobRadius) {
+        this.bobRadius = bobRadius;
+    }
+
+    public void resetPendulum() {
+        angle = (float) Math.PI / 4;  // Reset to initial angle
+        angularVelocity = 0.0f;
+        angularAcceleration = 0.0f;
+        updateBobPosition();
+        invalidate();
     }
 }

@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:id="@+id/button_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:columnCount="2"
+        android:rowCount="6"
+        android:layout_alignParentTop="true">
+        <GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="11"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/button_pendul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Vizualizeaza Pendul"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="CALCUL MISCAREA RECTILINIE UNIFORMA VARIATA"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="CALCUL MISCAREA CIRCULARA"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="CALCUL ENERGIA CINETICA"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Legea lui Hooke"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Legea I a termodinamicii"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Legea a II-a a termodinamicii"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Ecuația gazului ideal"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Legea lui Ohm"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Legea reflexiei"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+            <Button
+                android:id="@+id/button_formula11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:text="Legea refracției"
+                android:textColor="@color/text_buton"
+                android:backgroundTint="@color/galben_tema" />
+
+
+        </GridLayout>
+
+
+
+    </GridLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textView_rezultat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Rezultate..."
+            android:padding="16dp" />
+    </FrameLayout>
+
+</RelativeLayout>
