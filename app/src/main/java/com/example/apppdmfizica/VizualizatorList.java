@@ -40,6 +40,15 @@ public class VizualizatorList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonProiectil = findViewById(R.id.button_formula_proiectil);
+        buttonProiectil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VizualizatorList.this, ProjectileSimulatorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

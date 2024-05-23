@@ -54,13 +54,13 @@
                 android:backgroundTint="@color/galben_tema" />
 
             <Button
-                android:id="@+id/button_formula4"
+                android:id="@+id/button_formula_proiectil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:layout_margin="8dp"
-                android:text="CALCUL ENERGIA CINETICA"
+                android:text="Proiectil"
                 android:textColor="@color/text_buton"
                 android:backgroundTint="@color/galben_tema" />
 
