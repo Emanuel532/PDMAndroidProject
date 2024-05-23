@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Spring Constant (N/m):"/>
+            android:text="Constanta elastica (N/m):"/>
         <EditText
             android:id="@+id/editSpringConstant"
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Damping Factor (kg/s):"/>
+            android:text="Factor de amortizare (kg/s):"/>
         <EditText
             android:id="@+id/editDampingFactor"
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mass (kg):"/>
+            android:text="Masa (kg):"/>
         <EditText
             android:id="@+id/editMass"
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Initial Displacement (px):"/>
+            android:text="Lungime Arc (px):"/>
         <EditText
             android:id="@+id/editInitialDisplacement"
             android:layout_width="match_parent"

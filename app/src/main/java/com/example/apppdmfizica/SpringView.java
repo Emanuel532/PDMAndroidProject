@@ -1,5 +1,6 @@
 package com.example.apppdmfizica;
 
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -42,44 +43,38 @@ public class SpringView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        drawSpring(canvas);
         if (isSimulationRunning) {
             updateDisplacement();
         }
-        drawBlock(canvas);
+        drawSpringAndBlock(canvas);
         invalidate();
     }
 
-    private void drawSpring(Canvas canvas) {
-        int width = getWidth();
-        int height = getHeight();
-        int springLength = 400;  // Arbitrary length for the spring when at rest
-        int numCoils = 6;        // Number of coils in the spring
-        int coilSpacing = springLength / numCoils;
-        float xStart = width / 2 - springLength / 2;
-        float xEnd = width / 2 + springLength / 2;
-        float y = height / 2;
-
-        // Draw the spring
-        float x = xStart;
-        for (int i = 0; i < numCoils; i++) {
-            canvas.drawLine(x, y, x + coilSpacing / 2, y - coilSpacing / 2, paint);
-            canvas.drawLine(x + coilSpacing / 2, y - coilSpacing / 2, x + coilSpacing, y, paint);
-            x += coilSpacing;
-        }
-    }
-
-    private void drawBlock(Canvas canvas) {
+    private void drawSpringAndBlock(Canvas canvas) {
         int width = getWidth();
         int height = getHeight();
         float blockSize = 50.0f;
         float blockX = width / 2 - blockSize / 2;
         float blockY = height / 2 + displacement;
 
+        // Draw the spring
+        float springTopX = width / 2;
+        float springTopY = height / 2 - initialDisplacement;
+        float springBottomY = blockY - blockSize / 2;
+        int numCoils = 6;
+        float coilSpacing = (springBottomY - springTopY) / numCoils;
+
+        float y = springTopY;
+        for (int i = 0; i < numCoils; i++) {
+            canvas.drawLine(springTopX, y, springTopX - coilSpacing / 2, y + coilSpacing / 2, paint);
+            canvas.drawLine(springTopX - coilSpacing / 2, y + coilSpacing / 2, springTopX, y + coilSpacing, paint);
+            y += coilSpacing;
+        }
+
+        // Draw the block
         Paint blockPaint = new Paint();
         blockPaint.setColor(Color.BLUE);
         blockPaint.setStyle(Paint.Style.FILL);
-
         canvas.drawRect(blockX, blockY - blockSize / 2, blockX + blockSize, blockY + blockSize / 2, blockPaint);
     }
 
