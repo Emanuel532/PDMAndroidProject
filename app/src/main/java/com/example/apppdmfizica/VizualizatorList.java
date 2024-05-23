@@ -49,6 +49,15 @@ public class VizualizatorList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button butonNewtonCradles = findViewById(R.id.butonNewtonCradles);
+        butonNewtonCradles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VizualizatorList.this, NewtonsCradle.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
