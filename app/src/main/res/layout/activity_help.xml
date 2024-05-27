@@ -84,19 +84,55 @@
             android:text="Desenarea graficelor este animată pentru a oferi o experiență interactivă și plăcută."
             android:layout_marginBottom="16dp"/>
 
-        <!-- Loc pentru imagini explicative -->
-        <ImageView
+        <!-- Textul ajutorului specific pentru observatorul de obiecte pe plan inclinat -->
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo_image_view"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
+            android:text="Observatorul de Obiecte pe Plan Înclinat:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Această funcție vă permite să simulați și să vizualizați traiectoria unui proiectil. Puteți introduce greutatea proiectilului, unghiul de lansare și accelerația gravitațională. Apoi, apăsați pe 'START SIMULATION' pentru a vedea traiectoria calculată."
             android:layout_marginBottom="16dp"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo_image_view"
+            android:src="@drawable/projectile_viewer_help"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Această funcție vă permite să simulați și să vizualizați mișcarea unui obiect pe un plan înclinat. Puteți introduce viteza inițială a obiectului și alege dacă doriți să dezactivați rezistența aerului. Apoi, apăsați pe 'START SIMULATION' pentru a vedea mișcarea calculată."
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/inclined_plane_viewer"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="16dp"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Vizualizatorul de Arc:Această funcție vă permite să simulați și să vizualizați mișcarea unui arc. Puteți modifica următorii parametri:Constanta elastică (k): Aceasta reprezintă rigiditatea arcului. O valoare mai mare indică un arc mai rigid.Factorul de amortizare: Acesta reprezintă rezistența care încetinește mișcarea arcului. O valoare mai mare indică o amortizare mai puternică.Masa (m): Masa atașată la arc. O masă mai mare va influența mișcarea arcului în funcție de legea lui Hooke.Lungimea arcului: Lungimea inițială a arcului fără deformare.După ce ați introdus valorile dorite pentru acești parametri, apăsați pe 'START SIMULATION' pentru a vedea cum se comportă arcul sub influența acestor setări."
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arc_ajutor"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             android:layout_marginBottom="16dp"/>

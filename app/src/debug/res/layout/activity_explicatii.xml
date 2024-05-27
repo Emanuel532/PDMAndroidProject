@@ -9,7 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Vezi Miscarea Rectilinie Uniforma"
-        android:textColor="#009688" />
+        android:backgroundTint="@color/galben_tema"
+        android:textColor="@color/purple_500" />
     <ScrollView
         android:id="@+id/scroll_view_content"
         android:layout_width="match_parent"
@@ -50,7 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vezi explicatii pentru Miscarea rectilinie uniform variata"
-            android:textColor="#009688" />
+            android:backgroundTint="@color/galben_tema"
+            android:textColor="@color/purple_500"  />
 
         <!-- ScrollView pentru MRUV -->
         <ScrollView
@@ -88,9 +90,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Vezi explicatii pentru Miscarea Circulara"
-            android:textColor="#009688" />
+            android:backgroundTint="@color/galben_tema"
+            android:textColor="@color/purple_500"  />
 
-        <!-- ScrollView pentru MC -->
         <ScrollView
             android:id="@+id/scroll_view_content_MC"
             android:layout_width="match_parent"

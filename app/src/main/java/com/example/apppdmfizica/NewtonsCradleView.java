@@ -23,7 +23,7 @@ public class NewtonsCradleView extends View {
         init();
     }
 
-    private void init() {
+    private void init(){
         paint = new Paint();
         paint.setColor(Color.GRAY);
         paint.setStyle(Paint.Style.FILL);
@@ -34,8 +34,7 @@ public class NewtonsCradleView extends View {
         angles = new float[numPendulums];
         angularVelocities = new float[numPendulums];
         isSimulationRunning = false;
-
-        // Initialize angles for visualization
+//vlaorile default de vizualizate
         for (int i = 0; i < numPendulums; i++) {
             angles[i] = 0f;
             angularVelocities[i] = 0f;
@@ -56,11 +55,11 @@ public class NewtonsCradleView extends View {
         int width = getWidth();
         int height = getHeight();
         float centerX = width / 2f;
-        float startX = centerX - (numPendulums - 1) * 30;  // Adjusting the distance between pendulums
+        float startX = centerX - (numPendulums - 1) * 30;
 
         for (int i = 0; i < numPendulums; i++) {
             float angle = angles[i];
-            float x = startX + i * 60;  // 60 is the sum of the radius of two pendulums
+            float x = startX + i * 60;
             float y = 0;
             float bobX = x + pendulumLength * (float) Math.sin(angle);
             float bobY = y + pendulumLength * (float) Math.cos(angle);
@@ -72,7 +71,7 @@ public class NewtonsCradleView extends View {
     private void updatePositions() {
         long currentTime = System.currentTimeMillis();
         long elapsedTime = currentTime - lastUpdateTime;
-        float dt = elapsedTime / 1000.0f;  // Convert to seconds
+        float dt = elapsedTime / 1000.0f;
 
         for (int i = 0; i < numPendulums; i++) {
             float angle = angles[i];
@@ -86,7 +85,6 @@ public class NewtonsCradleView extends View {
             angularVelocities[i] = angularVelocity;
         }
 
-        // Simulate collision between pendulums
         for (int i = 0; i < numPendulums - 1; i++) {
             if (Math.abs(angles[i] - angles[i + 1]) < 0.01f) {
                 float temp = angularVelocities[i];
@@ -120,8 +118,7 @@ public class NewtonsCradleView extends View {
         isSimulationRunning = true;
         lastUpdateTime = System.currentTimeMillis();
 
-        // Start the leftmost pendulum at an initial angle
-        angles[0] = -(float) Math.PI / 4;  // -45 degrees to start from left to right
+        angles[0] = -(float) Math.PI / 4;
         angularVelocities[0] = 0f;
 
         invalidate();

@@ -67,7 +67,7 @@ public class ProjectileView extends View {
         float ballRadius = 40.0f;
 
         float canvasX = positionX;
-        float canvasY = height - positionY - ballRadius; // Adjust to start from bottom
+        float canvasY = height - positionY - ballRadius;
 
         canvas.drawCircle(canvasX, canvasY, ballRadius, paint);
     }
@@ -91,19 +91,16 @@ public class ProjectileView extends View {
     private void updatePosition() {
         long currentTime = System.currentTimeMillis();
         long elapsedTime = currentTime - lastUpdateTime;
-        float dt = elapsedTime / 1000.0f;  // Convert to seconds
+        float dt = elapsedTime / 1000.0f;
 
-        // Update position and velocity
         positionX += velocityX * dt;
         positionY += velocityY * dt;
         velocityY -= gravity * dt;
 
         lastUpdateTime = currentTime;
 
-        // Add current position to trace points
         tracePoints.add(new float[]{positionX, positionY});
 
-        // Stop the simulation if the projectile hits the ground
         if (positionY < 0) {
             isSimulationRunning = false;
         }
